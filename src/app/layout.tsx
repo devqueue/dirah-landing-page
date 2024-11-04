@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import {
   allRoundGothic,
   geSsTwo,
@@ -7,6 +6,8 @@ import {
   adelleSansAra,
   adelleSansCnd,
 } from "../styles/fonts";
+
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Dirah Development",
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${allRoundGothic.variable} ${geSsTwo.variable} ${adelleSans.variable} ${adelleSansAra.variable} ${adelleSansCnd.variable} antialiased`}
+        className={`${allRoundGothic.variable} ${geSsTwo.variable} bg-black antialiased`}
       >
         {children}
       </body>
