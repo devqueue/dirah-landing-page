@@ -1,8 +1,8 @@
 import LogoIcon from "@/assets/LogoWhite.svg";
 import MenuIcon from "@/assets/menu-icon.svg";
 import LangIconEn from "@/assets/arabic-lang.svg";
-import HeroImg from "@/assets/images/Hero.png";
-import Image from "next/image";
+// import HeroImg from "@/assets/images/Hero.png";
+// import Image from "next/image";
 import React from "react";
 
 // export const Hero = () => {
