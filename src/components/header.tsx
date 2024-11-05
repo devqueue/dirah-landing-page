@@ -4,8 +4,8 @@ import LangIconEn from "@/assets/arabic-lang.svg";
 
 export const Header = () => {
   return (
-    <header className="flex justify-between px-12 pt-10 absolute top-0 left-0 right-0">
-      <LangIconEn />
+    <header className="flex justify-between p-6 md:p-16 absolute top-0 left-0 right-0 items-center">
+      <LangIconEn classname="" />
       <LogoIcon />
       <MenuIcon />
     </header>

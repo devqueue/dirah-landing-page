@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${allRoundGothic.variable} ${geSsTwo.variable} ${adelleSans.variable} ${adelleSansAra.variable} ${adelleSansCnd.variable} bg-black antialiased`}
+        className={`${allRoundGothic.variable} ${geSsTwo.variable} ${adelleSans.variable} ${adelleSansAra.variable} ${adelleSansCnd.variable} antialiased`}
       >
         {children}
       </body>
