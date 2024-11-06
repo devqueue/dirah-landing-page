@@ -4,19 +4,22 @@ import Image from "next/image";
 
 export const Hero = () => {
   return (
-    <div className="">
+    <div>
       {/* Hero Section */}
       <div className="heroImg w-full">
-        <div className="w-full min-h-screen bg-zinc-400">
+        <div className="min-h-screen w-full bg-zinc-400">
           <Image
-            className="w-full min-h-screen object-cover heroImg"
-            src={HeroImg}
+            src="/images/Hero.png"
+            className="heroImg min-h-screen w-full object-cover"
             alt="Hero Image"
+            width={1920}
+            height={1080}
+            priority
           />
         </div>
         <Header />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-white font-all-round-gothic font-bold text-[64px] text-center">
+        <div className="absolute inset-0 flex items-center justify-center px-4">
+          <h1 className="text-center font-all-round-gothic text-4xl font-bold text-white lg:text-[64px]">
             Dirah Development Company
           </h1>
         </div>
