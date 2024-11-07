@@ -1,4 +1,3 @@
-import HeroImg from "@/assets/images/Hero.png";
 import { Header } from "@/components/header";
 import Image from "next/image";
 

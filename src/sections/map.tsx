@@ -6,7 +6,7 @@ import Image from "next/image";
 const MapSection = () => {
   const [selectedMarket, setSelectedMarket] = useState("Al Maigliah Markets");
 
-  const marketImages = {
+  const marketImages: { [key: string]: string } = {
     "Al Maigliah Markets": "/images/map-1.png",
     "Al Tameer Wholesale Market": "/images/map-2.png",
     "Al Dirah Market": "/images/map-3.png",
@@ -33,7 +33,6 @@ const MapSection = () => {
         />
 
         <Image
-          //@ts-ignore
           src={marketImages[selectedMarket]}
           alt={`${selectedMarket} map`}
           width={700}
