@@ -1,23 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import { en } from "@/locales/en";
+import { ar } from "@/locales/ar";
+import { useLanguage } from "@/context/lang-context";
 
 const AboutSection = () => {
+  const { language } = useLanguage();
+  const t = language === "en" ? en : ar;
+
   return (
     <>
-      <section className="my-16 md:my-36 px-4 md:px-0">
-        <div className="bg-Turquoise container mx-auto rounded-sm flex flex-col md:flex-row justify-between">
-          <div className="flex flex-col p-5 md:p-10 justify-center flex-1">
-            <h2 className="text-2xl md:text-3xl font-bold text-white font-all-round-gothic">
-              About the Foundation
+      <section className="mb-8 mt-16 px-4 md:mb-14 md:px-0">
+        <div className="container mx-auto flex flex-col justify-between rounded-sm bg-Turquoise md:flex-row">
+          <div className="flex flex-1 flex-col justify-center p-5 md:p-10">
+            <h2 className="font-all-round-gothic text-2xl font-bold text-white md:text-3xl">
+              {t.about.foundation}
             </h2>
-            <p className="text-base md:text-xl font-adelle-ara text-white mt-5">
-              Dirah Development Company was established through an MOU signed in
-              May 2023 under the patronage of His Highness Prince Faisal bin
-              Abdul Aziz bin Ayyaf. The agreement, between Riyadh Holding
-              Company and Riyadh Development Company, serves as a cornerstone
-              for enhancing mutual cooperation, leading to the launch of several
-              investment initiatives aimed at developing the quality of services
-              in the Dirah area.
+            <p className="mt-5 font-adelle-ara text-base text-white md:text-xl">
+              {t.about.foundationText}
             </p>
           </div>
           <div className="w-full md:w-1/2">
@@ -27,22 +29,17 @@ const AboutSection = () => {
               width={500}
               height={300}
               quality={100}
-              className="w-full h-full object-cover"
+              className="h-full w-full object-cover"
             />
           </div>
         </div>
       </section>
-      <div className="container mx-auto text-Brown px-4 md:px-0">
-        <h2 className="font-bold text-2xl md:text-3xl font-all-round-gothic">
-          About the Company
+      <div className="container mx-auto px-4 text-Brown md:px-0">
+        <h2 className="font-all-round-gothic text-2xl font-bold md:text-3xl">
+          {t.about.company}
         </h2>
-        <p className="text-base md:text-xl mt-5 md:mt-10 font-adelle-ara font-medium">
-          Dirah Development Company specializes in development and asset
-          management, focusing on the development and management of real estate
-          projects and destinations in the heart of the city of Riyadh. Dirah
-          Development Company aims to become a leading entity in asset
-          development and management, supporting the urban and economic growth
-          of Riyadh in the following ways:
+        <p className="mt-5 font-adelle-ara text-base font-medium md:mt-10 md:text-xl">
+          {t.about.companyText}
         </p>
       </div>
     </>

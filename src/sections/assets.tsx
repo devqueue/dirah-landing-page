@@ -1,7 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import { useLanguage } from "@/context/lang-context";
+import { ar } from "@/locales/ar";
+import { en } from "@/locales/en";
 
 const AssetsSection = () => {
+  const { language } = useLanguage();
+  const t = language === "en" ? en : ar;
+
   return (
     <div className="relative mt-8 flex min-h-full items-center justify-center px-4 py-12 md:mt-12 md:h-[90vh] md:px-0 md:py-0">
       <Image
@@ -12,18 +20,9 @@ const AssetsSection = () => {
         priority
       />
       <div className="container z-10 mx-auto grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
-        <Card
-          number="01"
-          description="Contributing to developing the Qasr Al Hukom area into an integrated <strong>tourist destination</strong>."
-        />
-        <Card
-          number="02"
-          description="Enhancing the vitality of the city center and <strong> increasing its attractiveness.</strong>"
-        />
-        <Card
-          number="03"
-          description="Supporting the achievement of the Riyadh Strategy <strong> 2030 goals. </strong>"
-        />
+        {t.assets.map((asset) => (
+          <Card key={asset.id} number={asset.id} description={asset.text} />
+        ))}
       </div>
     </div>
   );

@@ -11,8 +11,10 @@ export default function Home() {
       <Hero />
       <AboutSection />
       <AssetsSection />
-      <MapSection />
-      <GoalsSection />
+      <div className="bg-[#B59668]/40">
+        <MapSection />
+        <GoalsSection />
+      </div>
       <Footer />
     </>
   );

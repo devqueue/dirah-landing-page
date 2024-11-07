@@ -1,10 +1,17 @@
+"use client";
+
 import { Header } from "@/components/header";
+import { useLanguage } from "@/context/lang-context";
+import { ar } from "@/locales/ar";
+import { en } from "@/locales/en";
 import Image from "next/image";
 
 export const Hero = () => {
+  const { language } = useLanguage();
+  const t = language === "en" ? en : ar;
+
   return (
     <div>
-      {/* Hero Section */}
       <div className="heroImg w-full">
         <div className="min-h-screen w-full bg-zinc-400">
           <Image
@@ -19,7 +26,7 @@ export const Hero = () => {
         <Header />
         <div className="absolute inset-0 flex items-center justify-center px-4">
           <h1 className="text-center font-all-round-gothic text-4xl font-bold text-white lg:text-[64px]">
-            Dirah Development Company
+            {t.hero.title}
           </h1>
         </div>
       </div>

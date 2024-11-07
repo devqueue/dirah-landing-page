@@ -6,7 +6,8 @@ import {
   adelleSansAra,
   adelleSansCnd,
 } from "../styles/fonts";
-
+import { LanguageProvider } from "@/context/lang-context";
+import ClientLanguageWrapper from "@/components/ClientLanguageWrapper";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -21,12 +22,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${allRoundGothic.variable} ${geSsTwo.variable} ${adelleSans.variable} ${adelleSansAra.variable} ${adelleSansCnd.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html>
+      <LanguageProvider>
+        <ClientLanguageWrapper>
+          <body
+            className={`${allRoundGothic.variable} ${geSsTwo.variable} ${adelleSans.variable} ${adelleSansAra.variable} ${adelleSansCnd.variable} antialiased`}
+          >
+            {children}
+          </body>
+        </ClientLanguageWrapper>
+      </LanguageProvider>
     </html>
   );
 }
