@@ -15,10 +15,10 @@ const AboutSection = () => {
       <section className="mb-8 mt-16 px-4 md:mb-14 md:px-0">
         <div className="container mx-auto flex flex-col justify-between rounded-sm bg-Turquoise md:flex-row">
           <div className="flex flex-1 flex-col justify-center p-5 md:p-10">
-            <h2 className="font-all-round-gothic text-2xl font-bold text-white md:text-3xl">
+            <h2 className="font-all-round-gothic text-2xl font-bold text-white md:text-3xl rtl:font-adelle-ara">
               {t.about.foundation}
             </h2>
-            <p className="mt-5 font-adelle-ara text-base text-white md:text-xl">
+            <p className="mt-5 text-base text-white md:text-xl ltr:font-adelle-ara rtl:font-ge-ss-two">
               {t.about.foundationText}
             </p>
           </div>
@@ -35,10 +35,10 @@ const AboutSection = () => {
         </div>
       </section>
       <div className="container mx-auto px-4 text-Brown md:px-0">
-        <h2 className="font-all-round-gothic text-2xl font-bold md:text-3xl">
+        <h2 className="font-all-round-gothic text-2xl font-bold md:text-3xl rtl:font-adelle-ara">
           {t.about.company}
         </h2>
-        <p className="mt-5 font-adelle-ara text-base font-medium md:mt-10 md:text-xl">
+        <p className="mt-5 font-adelle-ara text-base font-medium md:mt-10 md:text-xl rtl:font-ge-ss-two">
           {t.about.companyText}
         </p>
       </div>

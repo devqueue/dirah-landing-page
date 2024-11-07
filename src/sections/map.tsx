@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/lang-context";
 import { en } from "@/locales/en";
@@ -12,9 +12,13 @@ const MapSection = () => {
 
   const [selectedMarket, setSelectedMarket] = useState(t.map.markets[0].name);
 
+  useEffect(() => {
+    setSelectedMarket(t.map.markets[0].name);
+  }, [language, t.map.markets]);
+
   return (
     <section className="container mx-auto p-4 md:py-20">
-      <p className="mb-10 w-full font-adelle-ara text-xl font-medium text-Brown md:w-2/3 md:text-2xl">
+      <p className="mb-10 w-full font-adelle-ara text-xl font-medium text-Brown md:w-2/3 md:text-2xl rtl:font-ge-ss-two">
         {t.map.text}
       </p>
       <div className="flex flex-col items-center justify-between gap-10 md:flex-row">
@@ -27,7 +31,7 @@ const MapSection = () => {
         <Image
           src={
             t.map.markets.find((market) => market.name === selectedMarket)
-              ?.image || ""
+              ?.image ?? "/map-1.svg"
           }
           alt={`${selectedMarket} map`}
           width={700}

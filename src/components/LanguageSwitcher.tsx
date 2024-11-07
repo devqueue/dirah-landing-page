@@ -8,15 +8,19 @@ export const LanguageSwitcher = () => {
 
   return (
     <button
-      className="z-10"
+      className="z-10 flex items-center gap-2"
       onClick={() => setLanguage(language === "en" ? "ar" : "en")}
     >
+      <span className="text-xl text-white">
+        {language === "en" ? "عربي" : "EN"}
+      </span>
       <Image
-        src={language === "en" ? "/arabic-lang.svg" : "/english-lang.svg"}
+        src="globe.svg"
+        // src={language === "en" ? "/arabic-lang.svg" : "/english-lang.svg"}
         alt="Language"
-        width={42}
-        height={42}
-        className="h-[42px] w-[42px] md:h-[90px] md:w-[90px]"
+        width={24}
+        height={24}
+        className="h-[18px] w-[18px] text-white md:h-[24px] md:w-[24px]"
       />
     </button>
   );

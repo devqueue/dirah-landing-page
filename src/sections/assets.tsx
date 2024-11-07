@@ -35,7 +35,7 @@ interface CardProps {
 
 const Card = ({ number = "01", description }: CardProps) => {
   return (
-    <div className="font-adelle-ara">
+    <div className="font-adelle-ara rtl:font-ge-ss-two">
       <div className="relative flex h-20 w-20 items-center justify-center md:h-28 md:w-28">
         <svg className="absolute inset-0" viewBox="0 0 100 100">
           <polygon
@@ -45,7 +45,7 @@ const Card = ({ number = "01", description }: CardProps) => {
             strokeWidth="3"
           />
         </svg>
-        <span className="relative z-10 text-2xl font-extrabold text-white md:text-3xl">
+        <span className="numerals relative z-10 text-2xl font-extrabold text-white md:text-3xl">
           {number}
         </span>
       </div>

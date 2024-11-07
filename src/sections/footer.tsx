@@ -11,7 +11,7 @@ const Footer = () => {
   const t = language === "en" ? en : ar;
 
   return (
-    <footer className="bg-Brown p-4 font-adelle-ara md:p-0">
+    <footer className="bg-Brown p-4 font-adelle-ara md:p-0 rtl:font-ge-ss-two">
       <div className="container mx-auto flex h-full flex-col justify-between gap-20 py-20 md:flex-row md:gap-0">
         <div className="flex flex-col gap-3">
           <div>
