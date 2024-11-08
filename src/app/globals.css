@@ -45,3 +45,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   unicode-range: U+0030-0039, U+0660-0669;
 }
+
+
+.layout-wrapper {
+  @apply px-4 sm:px-10 mx-auto lg:container;
+}

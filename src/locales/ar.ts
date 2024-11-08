@@ -31,17 +31,17 @@ export const ar = {
     markets: [
       {
         id: "01",
-        name: "أسواق المعيقلية",
+        name: "مركز المعيقلية التجاري",
         image: "/images/map-1.png",
       },
       {
         id: "02",
-        name: "سوق التعمير للجملة",
+        name: "مركز التعمير للجملة",
         image: "/images/map-2.png",
       },
       {
         id: "03",
-        name: "سوق الديرة",
+        name: "أسواق الديرة",
         image: "/images/map-3.png",
       },
     ],

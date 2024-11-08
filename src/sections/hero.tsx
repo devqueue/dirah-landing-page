@@ -30,6 +30,21 @@ export const Hero = () => {
           </h1>
         </div>
       </div>
+
+      <Image
+        alt="elem1"
+        src="/elem-1.svg"
+        width={600}
+        height={300}
+        className="absolute -bottom-48 left-1/2 hidden w-[300px] -translate-x-1/2 md:block md:w-[400px] lg:w-[500px] xl:w-[600px]"
+      />
+      <Image
+        alt="elem1 mobile"
+        src="/elem-1-mobile.svg"
+        width={300}
+        height={150}
+        className="absolute -bottom-10 left-1/2 w-[300px] -translate-x-1/2 md:hidden"
+      />
     </div>
   );
 };

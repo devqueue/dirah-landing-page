@@ -11,7 +11,7 @@ const AssetsSection = () => {
   const t = language === "en" ? en : ar;
 
   return (
-    <div className="relative mt-8 flex min-h-full items-center justify-center px-4 py-12 md:mt-12 md:h-[90vh] md:px-0 md:py-0">
+    <div className="relative mt-8 flex min-h-full items-center justify-center overflow-hidden py-12 md:mt-12 md:h-[90vh] md:py-0">
       <Image
         src="/images/asset-bg.png"
         alt="Asset background"
@@ -19,11 +19,19 @@ const AssetsSection = () => {
         className="z-[-1] object-cover brightness-50"
         priority
       />
-      <div className="container z-10 mx-auto grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
+      <div className="layout-wrapper z-10 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
         {t.assets.map((asset) => (
           <Card key={asset.id} number={asset.id} description={asset.text} />
         ))}
       </div>
+
+      <Image
+        src="elem-3.svg"
+        width={150}
+        height={400}
+        alt=""
+        className="absolute -bottom-3 -right-10 md:-bottom-10 md:right-2"
+      />
     </div>
   );
 };
