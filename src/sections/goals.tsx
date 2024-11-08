@@ -6,11 +6,11 @@ import { useLanguage } from "@/context/lang-context";
 import { en } from "@/locales/en";
 import { ar } from "@/locales/ar";
 
-interface GoalContentProps {
-  icon: string;
-  title: string;
-  description: string;
-}
+// interface GoalContentProps {
+//   icon: string;
+//   title: string;
+//   description: string;
+// }
 
 const GoalsSection = () => {
   const { language } = useLanguage();
