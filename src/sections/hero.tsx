@@ -25,7 +25,9 @@ export const Hero = () => {
         </div>
         <Header />
         <div className="absolute inset-0 flex items-center justify-center px-4">
-          <h1 className="text-center font-all-round-gothic text-4xl font-bold text-white lg:text-[64px]">
+          <h1
+            className={`text-center text-4xl font-semibold text-white lg:text-[64px] ${language === "ar" ? "font-adelle-ara" : "font-all-round-gothic"}`}
+          >
             {t.hero.title}
           </h1>
         </div>
@@ -43,7 +45,7 @@ export const Hero = () => {
         src="/elem-1-mobile.svg"
         width={300}
         height={150}
-        className="absolute -bottom-10 left-1/2 w-[300px] -translate-x-1/2 md:hidden"
+        className="absolute -bottom-32 left-1/2 w-[300px] -translate-x-1/2 md:hidden"
       />
     </div>
   );

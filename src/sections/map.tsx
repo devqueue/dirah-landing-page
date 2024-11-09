@@ -93,7 +93,7 @@ const ButtonGroup = ({
             <svg
               width="2"
               height="40"
-              className="ml-[38px] sm:ml-[38px] md:ml-[38px] lg:ml-[39px]"
+              className="ml-[38px] sm:ml-[38px] md:ml-[38px] lg:ml-[39px] rtl:mr-[38px] rtl:md:mr-[38px] rtl:lg:mr-[39px]"
             >
               <line x1="1" y1="0" x2="1" y2="40" stroke="black" />
             </svg>
